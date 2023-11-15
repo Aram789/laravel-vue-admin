@@ -15,20 +15,16 @@
 </head>
 <body>
 <div id="app">
-    <admin_header></admin_header>
-        <main class="d-flex">
-            <div class="aside">
-                <v_aside></v_aside>
-            </div>
-            <div class="container py-4">
-                <div class="row">
-                    <div class="col-9">
-                        <router-view></router-view>
-                    </div>
-
+    <v_header></v_header>
+    <main class="d-flex">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-9">
+                    <router-view></router-view>
                 </div>
             </div>
-        </main>
+        </div>
+    </main>
 
 
     <v_footer></v_footer>

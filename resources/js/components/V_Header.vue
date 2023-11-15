@@ -12,7 +12,7 @@
                     <div class="collapse navbar-collapse" id="navbarColor01">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
-                                <router-link class="nav-link" to="/">Home</router-link>
+                                <router-link class="nav-link" to="/home">Home</router-link>
                             </li>
                             <li class="nav-item">
                                 <router-link class="nav-link" to="/post">Posts</router-link>
