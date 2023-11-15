@@ -13,7 +13,7 @@
                         aria-controls="collapseExample" role="button">Post</strong>
                 <div class="collapse" id="post" role="button">
                     <div>
-                        Create
+                        <router-link to="/post/create">Create</router-link>
                     </div>
                 </div>
             </div>
