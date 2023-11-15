@@ -1,0 +1,45 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+#app{
+    display: flex;
+    flex-direction: column;
+    height: 5000px;
+}
+header{
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+main{
+    flex: 1;
+    background: #efefef;
+}
+.aside{
+    background: #343a40;
+    width: 300px;
+    transition: .5s all;
+}
+.aside.min{
+    width: 5%;
+    transition: width .5s ease-in-out;
+}
+.mini_sidebar{
+    position: absolute;
+    top: 2px;
+    right: 8px;
+    z-index: 5;
+}
+aside{
+    position: sticky;
+    top: 56px;
+}
+footer{
+    position: sticky;
+    bottom: 0;
+}
