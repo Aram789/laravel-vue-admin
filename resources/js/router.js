@@ -1,9 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
-
-
-import Post from "./views/Post.vue";
-import About from "./views/About.vue";
-import Index from "./views/Index.vue";
+import Home from "./views/Index.vue";
+import Posts from "./views/Posts.vue";
+import PostCreate from "./views/Admin/Post/Create.vue";
+import PostIndex from "./views/Admin/Post/Index.vue";
+import PostShow from "./views/Admin/Post/Show.vue";
+import PostUpdate from "./views/Admin/Post/Update.vue";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -11,23 +12,41 @@ const router = createRouter({
         {
             path: '/home',
             name: 'home',
-            component: Index
+            component: Home
         },
         {
             path: '/post',
             name: 'post',
-            component: Post
+            component: Posts
         },
         {
-            path: '/post/create',
-            name: 'post',
-            component: Post
+            path: '/admin',
+            name: 'admin',
+            children: [
+                {
+                    path: '/post/create',
+                    name: 'create',
+                    component: PostCreate
+                },
+                {
+                    path: '/post/index',
+                    name: 'index',
+                    component: PostIndex
+                },
+                {
+                    path: '/post/show/:id',
+                    name: 'show',
+                    component: PostShow
+                },
+                {
+                    path: '/post/update/:id',
+                    name: 'update',
+                    component: PostUpdate
+                },
+            ]
         },
-        {
-            path: '/about',
-            name: 'about',
-            component: About
-        }
+
+
     ]
 })
 

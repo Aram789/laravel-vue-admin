@@ -23,12 +23,14 @@ import Admin_Header from "./components/Admin_Header.vue";
 import V_Footer from "./components/V_Footer.vue";
 import Aside from "./components/Aside.vue";
 import Index from "./views/Index.vue";
+import Loader from "./components/Loader.vue";
 
 app.component('v_header', V_Header);
 app.component('admin_header', Admin_Header);
 app.component('v_footer', V_Footer);
 app.component('v_aside', Aside);
 app.component('index', Index);
+app.component('loader', Loader);
 
 
 /**
