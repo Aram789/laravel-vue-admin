@@ -10,7 +10,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr v-for="(data, idx) in response" :key="idx" @click="postShow(data.id)">
+        <tr v-for="(data, idx) in response" :key="idx">
             <th scope="row">{{ idx + 1 }}</th>
             <td>{{ data.title }}</td>
             <td>{{ data.desc }}</td>
@@ -46,11 +46,7 @@ export default {
                 this.errors = error.response.data.errors;
             });
     },
-    methods: {
-        postShow(id) {
-            router.push('/post/show/' + id)
-        }
-    }
+
 }
 </script>
 

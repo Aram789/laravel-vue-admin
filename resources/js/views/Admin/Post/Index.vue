@@ -28,7 +28,7 @@
     <div v-else>
         <strong class="fs-1">Post Empty</strong>
         <div>
-            <router-link class="text-primary" to="/post/create">Create</router-link>
+            <router-link class="text-primary" to="/admin/post/create">Create</router-link>
         </div>
     </div>
 
@@ -46,7 +46,7 @@ export default {
         desks: []
     }),
     mounted() {
-        this.loader = true;
+        // this.loader = true;
         axios.get('/api/post')
             .then(res => {
                 if (res.data) {
@@ -60,7 +60,7 @@ export default {
     },
     methods: {
         postShow(id) {
-            router.push('/post/show/' + id)
+            router.push('/admin/post/show/' + id)
         },
         remove(id, e) {
             this.loader = true;
@@ -77,7 +77,7 @@ export default {
                 });
         },
         update(id) {
-            router.push('/post/update/' + id)
+            router.push('/admin/post/update/' + id)
         }
     }
 }

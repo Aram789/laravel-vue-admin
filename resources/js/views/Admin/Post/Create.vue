@@ -37,7 +37,7 @@ export default {
                 .then(res =>{
                     if (res.data.status){
                         this.loader = false;
-                        router.push('/post/index')
+                        router.push('/admin/post/index')
                     }
                 })
                 .catch(error =>{

@@ -55,7 +55,7 @@ export default {
                 .then(res => {
                     if (res.data) {
                         this.loader = false;
-                        router.push('/post/show/' + this.$route.params.id)
+                        router.push('/admin/post/show/' + this.$route.params.id)
                     }
                 })
                 .catch(error => {

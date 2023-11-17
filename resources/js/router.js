@@ -24,22 +24,22 @@ const router = createRouter({
             name: 'admin',
             children: [
                 {
-                    path: '/post/create',
+                    path: '/admin/post/create',
                     name: 'create',
                     component: PostCreate
                 },
                 {
-                    path: '/post/index',
+                    path: '/admin/post/index',
                     name: 'index',
                     component: PostIndex
                 },
                 {
-                    path: '/post/show/:id',
+                    path: '/admin/post/show/:id',
                     name: 'show',
                     component: PostShow
                 },
                 {
-                    path: '/post/update/:id',
+                    path: '/admin/post/update/:id',
                     name: 'update',
                     component: PostUpdate
                 },

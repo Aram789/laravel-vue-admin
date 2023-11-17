@@ -9,10 +9,10 @@
                         aria-controls="collapseExample" role="button">Post</strong>
                 <div class="collapse" id="post" role="button">
                     <div>
-                        <router-link class="text-white" to="/post/index">Show All Posts</router-link>
+                        <router-link class="text-white" to="/admin/post/index">Show All Posts</router-link>
                     </div>
                     <div>
-                        <router-link class="text-white" to="/post/create">Create</router-link>
+                        <router-link class="text-white" to="/admin/post/create">Create</router-link>
                     </div>
                 </div>
             </div>

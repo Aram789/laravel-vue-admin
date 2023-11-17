@@ -57,7 +57,7 @@ export default {
                 .then(res => {
                     if (res.data.status === 'deleted') {
                         this.loader = false;
-                        router.push('/post/index')
+                        router.push('/admin/post/index')
                     }
                 })
                 .catch(error => {
@@ -65,7 +65,7 @@ export default {
                 });
         },
         update(id) {
-            router.push('/post/update/' + id)
+            router.push('/admin/post/update/' + id)
         }
 
     }
