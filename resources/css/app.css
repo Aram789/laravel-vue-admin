@@ -22,11 +22,16 @@ main{
 }
 .aside{
     background: #343a40;
-    width: 300px;
-    transition: .5s all;
+    width: fit-content;
+    max-width: 300px;
+    transition: width .5s ease-in-out;
 }
-.aside.min{
-    width: 8%;
+aside.min{
+    width: 100px;
+    transition: width .5s ease-in-out;
+}
+aside{
+    width: 300px;
     transition: width .5s ease-in-out;
 }
 .mini_sidebar{

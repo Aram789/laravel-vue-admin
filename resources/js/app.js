@@ -51,7 +51,3 @@ app.component('loader', Loader);
  * scaffolding. Otherwise, you will need to add an element yourself.
  */
 app.use(router).mount('#app');
-
-$('.mini_sidebar').click(function () {
-    $(this).closest('.aside').toggleClass('min')
-})

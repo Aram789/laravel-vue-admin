@@ -22,7 +22,6 @@ import router from "../../../router.js";
 import Loader from "../../../components/Loader.vue";
 
 export default {
-    components: {Loader},
     data: () => ({
         form: {
             'title': '',

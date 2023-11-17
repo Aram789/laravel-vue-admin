@@ -3,7 +3,3 @@
         <p class="text-center text-white">© 2023 Company, Inc</p>
     </footer>
 </template>
-
-<script>
-
-</script>

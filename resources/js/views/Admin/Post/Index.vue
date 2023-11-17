@@ -46,7 +46,7 @@ export default {
         desks: []
     }),
     mounted() {
-        // this.loader = true;
+        this.loader = true;
         axios.get('/api/post')
             .then(res => {
                 if (res.data) {

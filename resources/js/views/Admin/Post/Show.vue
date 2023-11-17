@@ -31,7 +31,6 @@ import router from "../../../router.js";
 import Loader from "../../../components/Loader.vue";
 
 export default {
-    components: {Loader},
     data: () => ({
         response: [],
         errors: false,

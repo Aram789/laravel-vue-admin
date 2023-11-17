@@ -24,7 +24,3 @@
         </div>
     </header>
 </template>
-
-<script>
-
-</script>
