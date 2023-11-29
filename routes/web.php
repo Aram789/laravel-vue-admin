@@ -12,15 +12,15 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', function () {
+
+Route::prefix('admin')->group(function () {
+    Route::get('/{vue_capture?}', function (){
+        return view('admin.index');
+    })->where('vue_capture', '[\/\w\.-]*');
+});
+
+Route::get('/{vue_capture?}', function (){
     return view('index');
-});
+})->where('vue_capture', '[\/\w\.-]*');
 
-Route::get('/admin', function () {
-    return view('admin.index');
-});
-
-Route::get('/admin{any}', function () {
-    return view('admin.index');
-})->where('any', '.*');
 
