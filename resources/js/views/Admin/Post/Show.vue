@@ -17,7 +17,7 @@
             <th scope="row">{{ response.id }}</th>
             <td>{{ response.title }}</td>
             <td>{{ response.desc }}</td>
-            <td>{{ response.created_at }}</td>
+            <td>{{formatDate(response.created_at )}}</td>
             <td role="button" @click="remove(response.id)">remove</td>
             <td role="button" @click="update(response.id)">edit</td>
         </tr>
@@ -50,6 +50,10 @@ export default {
             });
     },
     methods: {
+        formatDate(dateString) {
+            const options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+            return new Date(dateString).toLocaleString('en-US', options);
+        },
         remove(id) {
             this.loader = true;
             axios.delete('/api/post/' + id)

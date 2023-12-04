@@ -18,7 +18,7 @@
             <th scope="row">{{ idx + 1 }}</th>
             <td>{{ data.title }}</td>
             <td>{{ data.desc }}</td>
-            <td>{{ data.created_at }}</td>
+            <td>{{formatDate(data.created_at)  }}</td>
             <td role="button" @click="postShow(data.id)">view</td>
             <td role="button" @click="remove(data.id, $event)">remove</td>
             <td role="button" @click.self="update(data.id)">edit</td>
@@ -59,6 +59,10 @@ export default {
             });
     },
     methods: {
+        formatDate(dateString) {
+            const options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+            return new Date(dateString).toLocaleString('en-US', options);
+        },
         postShow(id) {
             router.push('/admin/post/show/' + id)
         },
