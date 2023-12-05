@@ -1,5 +1,4 @@
 <template>
-    <loader v-if="loader"></loader>
     <form>
         <div class="mb-3">
             <p class="text-danger" v-if="errors">{{errors.title[0]}}</p>
@@ -26,17 +25,14 @@ export default {
             'desc' : ''
         },
         errors:false,
-        loader: false
     }),
     methods:{
         submit(){
-            this.loader = true;
             axios.post('/api/post', this.form, {headers:{
                     'Content-Type': 'application/json'
                 }})
                 .then(res =>{
                     if (res.data.status){
-                        this.loader = false;
                         router.push('/admin/post/index')
                     }
                 })
